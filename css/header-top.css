@@ -1,0 +1,193 @@
+/*DESKTOP VERSION*/
+.header-top {
+    display: flex;
+    align-items: center;
+    margin: 0 0 63px 0;
+}
+
+.header-top-logo {
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #333333;
+    margin: 0 auto 0 0;
+}
+
+/*BURGER START*/
+
+#checkbox-for-burger,
+.burger {
+    display: none;
+}
+
+/*BURGER END*/
+
+.header-top-nav-ul {
+    list-style-type: none;
+    margin: 0 10px;
+    padding: 0;
+    display: flex;
+}
+
+.header-top-nav-ul-li {
+    margin: 0 50px 0 0;
+}
+
+.header-top-nav-ul-li:last-child {
+    margin: 0;
+}
+
+.header-top-nav-ul-li-a {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    padding: 0 0 1px 0;
+    transition: border-bottom .3s;
+}
+
+.header-top-nav-ul-li-a:hover {
+    border-bottom: 1px solid black;
+}
+
+.header-top-phone {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+    margin: 0 0 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .header-top-phone {
+        display: none;
+    }
+}
+
+/*MOBILE VERSION*/
+
+@media (max-width: 767px) {
+    .header-top {
+        margin: 0 0 17px 0;
+    }
+
+    .header-top-logo {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    /* BURGER START */
+
+    .header-top-nav {
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .burger-lines {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 30px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .burger-lines::before, .burger-lines-center, .burger-lines::after {
+        content: "";
+        display: block;
+        width: 30px;
+        border-bottom: 2px solid #333333;
+        transition: transform .2s ease-out, width .2s ease-out, opacity .2s ease-out, border-color .2s;
+    }
+
+    #checkbox-for-burger[type="checkbox"]:checked ~.burger .burger-lines::before {
+        transform: rotate(45deg) translate(6px,9px);
+    }
+
+    #checkbox-for-burger[type="checkbox"]:checked ~.burger .burger-lines-center {
+        width: 0px;
+        opacity: 0;
+    }
+
+    #checkbox-for-burger[type="checkbox"]:checked ~.burger .burger-lines::after {
+        transform: rotate(-45deg) translate(5px,-8px);
+    }
+
+    #checkbox-for-burger[type="checkbox"]:checked ~.burger-window {
+        max-width: 100vw;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 97;
+    }
+
+    .burger-window-right {
+        width: 50vw;
+        height: 580px;
+        background-color: rgb(137, 196, 50);
+        position: absolute;
+        top: -32px;
+        right: -600px;
+        z-index: 98;
+        transition: right .5s;
+    }
+
+    #checkbox-for-burger[type="checkbox"]:checked ~.burger-window-right {
+        right: -16px;
+    }
+
+    .header-top-nav-ul {
+        visibility: hidden;
+        opacity: 0;
+        min-width: 30px;
+        height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 45px;
+        right: -600px;
+        z-index: 99;
+        transition: opacity 0.8s, right .5s;
+    }
+
+    .header-top-nav-ul-li {
+        margin: 0 0 10px 0;
+        min-width: inherit;
+    }
+
+    .header-top-nav-ul-li:first-child {
+        margin: 10px 0 10px 0;
+    }
+
+    #checkbox-for-burger[type="checkbox"]:checked ~.header-top-nav-ul {
+        visibility: visible;
+        height: 200px;
+        opacity: 1;
+        right: 27px;
+    }
+
+    /* BURGER END */
+}

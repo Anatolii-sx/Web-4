@@ -1,0 +1,196 @@
+/* DESKTOP */
+
+.footer {
+    background-color: #FED100;
+    padding: 100px 0 102px 0;
+}
+
+.footer-wrp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.footer-block1-logo {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #333333;
+    margin: 0 0 44px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer-block1-link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130.4%;
+    color: #0E0F12;
+    margin: 0 0 36px 0;
+    text-decoration: none;
+}
+
+.footer-block1-text:last-child {
+    margin: 0;
+}
+
+.footer-block2-link {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    margin: 0 0 15px 0;
+}
+
+.footer-block3 {
+    align-items: center;
+}
+
+.footer-block3-social {
+    display: flex;
+    justify-content: space-between;
+    width: 147px;
+    margin: 0 0 20px 0;
+}
+
+.footer-block3-social-link {
+    display: block;
+    text-decoration: none;
+}
+
+.footer-block3-social-link-svg {
+    fill: #333333;
+    min-width: 18px;
+}
+
+.footer-block3-social-link-youtube:hover {
+    fill: red;
+}
+
+.footer-block3-social-link-vk:hover {
+    fill: blue;
+}
+
+.footer-block3-social-link-fb:hover {
+    fill: blue;
+}
+
+.footer-block3-social-link-inst:hover {
+    fill: violet;
+}
+
+.footer-block3-email {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.footer-block4 {
+    align-items: center;
+}
+
+.footer-block4-call-back {
+    display: block;
+    text-decoration: none;
+    width: 250px;
+    background-color: #FED100;
+    padding: 10px 30px;
+    border: 1px solid #333333;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.footer-block4-call-back:hover {
+    background-color: rgb(34, 175, 241);
+    transition: background-color .3s;
+}
+
+.footer-block4-phone {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.footer-link:hover {
+    color: rgb(34, 175, 241);
+}
+
+/*TABLET*/
+
+@media (max-width: 1024px) {
+
+    .footer {
+        padding: 32px 16px;
+    }
+
+    .footer-block {
+        max-width: 200px;
+    }
+
+    .footer-block4-call-back {
+        width: 200px;
+        padding: 10px 5px;
+    }
+}
+
+/*MOBILE*/
+
+@media (max-width: 767px) {
+
+    .footer {
+        padding: 60px 15px 50px 15px;
+    }
+
+    .footer-wrp {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .footer-block {
+        max-width: 238px;
+        align-items: center;
+    }
+
+    .footer-block1-logo {
+        color: #333333;
+        margin: 0 0 36px 0;
+    }
+
+    .footer-block1-link {
+        text-align: center;
+        margin: 0 0 18px 0;
+    }
+
+    .footer-block1-link:last-child {
+        margin: 0;
+    }
+
+    .footer-block {
+        margin: 0 0 46px 0;
+    }
+
+    .footer-block4-call-back {
+        width: 292px;
+        padding: 18px 18px;
+        margin: 0;
+    }
+
+    .footer-block4-phone {
+        display: none;
+    }
+}
