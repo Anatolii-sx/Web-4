@@ -1080,7 +1080,7 @@ body {
     }
 
     .header-wrp {
-        background-size: 225px;
+        background-size: 235px;
         background-position: center 118px;
     }
 
@@ -1262,11 +1262,16 @@ body {
         margin: 0 27px 0 27px;
     }
 
-    .main-section3-btn-choice:hover,
-    .main-section3-btn-choice:focus {
+    .main-section3-btn-choice:hover {
     background-color: inherit;
     border: inherit;
     border-bottom: 1px solid #FED100;
+    }
+
+    .btn-choice-focus {
+        background-color: inherit;
+        border: inherit;
+        border-bottom: 1px solid #FED100;
     }
 
     .main-section3-slider-box-description {
