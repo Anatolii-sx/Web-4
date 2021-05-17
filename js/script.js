@@ -125,12 +125,23 @@ document.addEventListener('keydown', function (event) {
 window.addEventListener('scroll', modalWindow);
 
 function modalWindow() {
-    if (window.pageYOffset > 1000) {
+
+    // Local storage
+    if (localStorage.getItem('modalWindow') !== null) {
+        return;
+    }
+
+    else if (window.pageYOffset > 1000) {
         document.querySelector('.modal-wrp').style.display = 'inherit';
         window.removeEventListener('scroll', modalWindow)
     }
 }
 
-document.querySelector('.close-btn').onclick = function () {
+document.querySelector('.close-btn').addEventListener('click', function () {
     document.querySelector('.modal-wrp').style.display = 'none';
-}
+
+    // Local storage (Запись в LS ключа и значения)
+    localStorage.setItem('modalWindow', 'close');
+});
+
+
